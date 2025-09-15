@@ -1,72 +1,52 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Portafolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f9;
-      color: #333;
-      text-align: center;
-    }
-    header {
-      background: #6c63ff;
-      color: white;
-      padding: 2rem 0;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    nav a {
-      margin: 0 15px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 3rem 1rem;
-    }
-    footer {
-      background: #222;
-      color: white;
-      padding: 1rem 0;
-      margin-top: 20px;
-    }
-  </style>
+  <title>Archifolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navbar -->
   <header>
-    <h1>¡Hola, soy [Tu Nombre]!</h1>
-    <p>Bienvenido a mi portafolio web</p>
+    <div class="logo">archifolio</div>
     <nav>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#">Examples</a>
+      <a href="#">Pricing</a>
+      <a href="#">Blog</a>
+      <button id="loginBtn">Log in</button>
+      <button class="primary">Create your site</button>
     </nav>
   </header>
 
-  <section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>Soy estudiante/desarrollador apasionado por la tecnología y la programación.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>All-in-one portfolio builder tailor-made for Interior decorators</h1>
+      <p>Create a simple and clean portfolio website that gets you ahead. Then export it to PDF with a single click.</p>
+      <div class="buttons">
+        <button class="primary">Get started for free</button>
+        <button class="secondary">See it in action</button>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="https://via.placeholder.com/600x400" alt="Portfolio Example">
+      <h2>Nathan Davidson</h2>
+      <p>My name is Nathan. I'm a senior interior designer based in Munich, Germany.</p>
+    </div>
   </section>
 
-  <section id="proyectos">
-    <h2>Proyectos</h2>
-    <p>Aquí mostraré algunos de mis proyectos más recientes.</p>
-  </section>
+  <!-- Modal de login admin -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <h2>Admin Login</h2>
+      <input type="text" id="username" placeholder="Usuario">
+      <input type="password" id="password" placeholder="Contraseña">
+      <button onclick="login()">Ingresar</button>
+    </div>
+  </div>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Puedes escribirme a: <strong>tucorreo@ejemplo.com</strong></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Mi Portafolio - Creado con GitHub Pages</p>
-  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
